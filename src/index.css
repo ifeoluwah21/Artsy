@@ -1,1 +1,18 @@
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-DM: "DM Serif Text", serif;
+  --font-Noto: "Noto Sans Display", sans-serif;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+/* Show Navigation mobile */
+.show {
+  transform: none;
+  translate: none;
+}
