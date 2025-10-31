@@ -12,7 +12,7 @@ const Nav: FC<NavPropsType> = ({ ref: navRef, onToggleNav }) => {
   return (
     <nav
       ref={navRef}
-      className="fixed top-0 left-0 h-full w-full -translate-x-full bg-white px-4 pt-6 transition duration-200 ease-linear lg:static lg:translate-x-0 lg:p-0"
+      className="fixed top-0 left-0 z-[2] h-full w-full -translate-x-full bg-white px-4 pt-6 transition duration-200 ease-linear lg:static lg:translate-x-0 lg:p-0"
     >
       <div className="flex items-center justify-between lg:hidden">
         <figure>
@@ -22,7 +22,7 @@ const Nav: FC<NavPropsType> = ({ ref: navRef, onToggleNav }) => {
           <RiCloseLargeLine className="h-7 w-7" />
         </button>
       </div>
-      <ul className="lg:center mt-16 space-y-8 text-2xl font-medium lg:mt-0 lg:flex lg:justify-center lg:space-y-0 lg:space-x-8">
+      <ul className="lg:center mt-16 space-y-8 text-2xl font-medium lg:mt-0 lg:flex lg:justify-center lg:space-y-0 lg:space-x-8 lg:font-normal">
         <li>
           <a href="#">Home</a>
         </li>
