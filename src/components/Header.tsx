@@ -40,7 +40,7 @@ const Header: FC = () => {
         </div>
       </div>
       <section className="mt-12 space-y-8">
-        <h1 className="max-w-5xl text-center font-DM text-3xl lg:mx-auto lg:text-[64px]">
+        <h1 className="max-w-5xl text-center font-Exo text-3xl lg:mx-auto lg:text-[64px]">
           Photography is poetry and beautiful untold stories
         </h1>
         <p className="max-w-[964px] text-center text-3xl lg:mx-auto">
