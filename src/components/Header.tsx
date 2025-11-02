@@ -48,7 +48,6 @@ const Header: FC = () => {
           images and captures seamlessly in one place. Register to get top
           access.
         </p>
-        <figure></figure>
       </section>
     </header>
   );
