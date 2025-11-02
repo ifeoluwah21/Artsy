@@ -17,7 +17,7 @@ const Header: FC = () => {
     }
   }
   return (
-    <header className="px-4 pt-6 lg:px-20 lg:pt-12">
+    <header className="sticky top-0 left-0 z-20 w-full bg-white px-4 py-6 shadow-sm lg:px-20 lg:py-8">
       <div className="flex items-center justify-between">
         <button
           type="button"
@@ -39,16 +39,6 @@ const Header: FC = () => {
           </button>
         </div>
       </div>
-      <section className="mt-12 space-y-8">
-        <h1 className="max-w-5xl text-center font-Exo text-3xl lg:mx-auto lg:text-[64px]">
-          Photography is poetry and beautiful untold stories
-        </h1>
-        <p className="max-w-[964px] text-center text-3xl lg:mx-auto">
-          Flip through more than 10,000 vintage shots, old photographs, historic
-          images and captures seamlessly in one place. Register to get top
-          access.
-        </p>
-      </section>
     </header>
   );
 };

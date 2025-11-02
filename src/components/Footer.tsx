@@ -30,7 +30,7 @@ const Footer: FC = () => {
             <label htmlFor="email" className="sr-only">
               Email
             </label>
-            <div className="grid grid-rows-[36px_auto] lg:w-7/10 lg:max-w-[840px] lg:grid-cols-[auto_250px]">
+            <div className="grid grid-rows-[36px_auto] lg:w-7/10 lg:max-w-[840px] lg:min-w-[720px] lg:grid-cols-[auto_250px]">
               <p className="pb-2.5 text-xs text-red-400 opacity-100 transition-opacity duration-100">
                 <ErrorMessage name="email" />
               </p>
