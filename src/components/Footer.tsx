@@ -36,7 +36,7 @@ const Footer: FC = () => {
               </p>
               <Field
                 id="email"
-                autoComplete="true"
+                autoComplete="email"
                 name="email"
                 type="email"
                 className="mb-8 block w-4/5 border border-[#333333] p-4 text-xs text-[#333333] placeholder:text-[#333333] placeholder:uppercase focus:outline-none lg:col-[1/2] lg:m-0 lg:text-base"
