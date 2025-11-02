@@ -44,7 +44,7 @@ const Header: FC = () => {
           Photography is poetry and beautiful untold stories
         </h1>
         <p className="max-w-[964px] text-center text-3xl lg:mx-auto">
-          Flip through more than 10,000 vintage shots, old photograghs, historic
+          Flip through more than 10,000 vintage shots, old photographs, historic
           images and captures seamlessly in one place. Register to get top
           access.
         </p>
