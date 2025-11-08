@@ -14,6 +14,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as MarketplaceIndexRouteImport } from './routes/marketplace/index'
 import { Route as DropsIndexRouteImport } from './routes/drops/index'
 import { Route as AuctionsIndexRouteImport } from './routes/auctions/index'
+import { Route as MarketplaceIdRouteImport } from './routes/marketplace/$id'
 
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
@@ -40,10 +41,16 @@ const AuctionsIndexRoute = AuctionsIndexRouteImport.update({
   path: '/auctions/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MarketplaceIdRoute = MarketplaceIdRouteImport.update({
+  id: '/marketplace/$id',
+  path: '/marketplace/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/marketplace/$id': typeof MarketplaceIdRoute
   '/auctions': typeof AuctionsIndexRoute
   '/drops': typeof DropsIndexRoute
   '/marketplace': typeof MarketplaceIndexRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/marketplace/$id': typeof MarketplaceIdRoute
   '/auctions': typeof AuctionsIndexRoute
   '/drops': typeof DropsIndexRoute
   '/marketplace': typeof MarketplaceIndexRoute
@@ -59,21 +67,42 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/marketplace/$id': typeof MarketplaceIdRoute
   '/auctions/': typeof AuctionsIndexRoute
   '/drops/': typeof DropsIndexRoute
   '/marketplace/': typeof MarketplaceIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/auctions' | '/drops' | '/marketplace'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/marketplace/$id'
+    | '/auctions'
+    | '/drops'
+    | '/marketplace'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/auctions' | '/drops' | '/marketplace'
-  id: '__root__' | '/' | '/about' | '/auctions/' | '/drops/' | '/marketplace/'
+  to:
+    | '/'
+    | '/about'
+    | '/marketplace/$id'
+    | '/auctions'
+    | '/drops'
+    | '/marketplace'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/marketplace/$id'
+    | '/auctions/'
+    | '/drops/'
+    | '/marketplace/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  MarketplaceIdRoute: typeof MarketplaceIdRoute
   AuctionsIndexRoute: typeof AuctionsIndexRoute
   DropsIndexRoute: typeof DropsIndexRoute
   MarketplaceIndexRoute: typeof MarketplaceIndexRoute
@@ -116,12 +145,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuctionsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/marketplace/$id': {
+      id: '/marketplace/$id'
+      path: '/marketplace/$id'
+      fullPath: '/marketplace/$id'
+      preLoaderRoute: typeof MarketplaceIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  MarketplaceIdRoute: MarketplaceIdRoute,
   AuctionsIndexRoute: AuctionsIndexRoute,
   DropsIndexRoute: DropsIndexRoute,
   MarketplaceIndexRoute: MarketplaceIndexRoute,

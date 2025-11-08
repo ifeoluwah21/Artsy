@@ -17,3 +17,29 @@ a {
   transform: none;
   translate: none;
 }
+
+/* Details separator lines using pseudo-elements */
+details {
+  position: relative;
+}
+
+details::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #000000;
+}
+
+/* Optional: Add top border to first details element */
+details:first-of-type::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #000000;
+}
